@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "714293753861",
+    "project_id": "ideafi-374e1",
+    "storage_bucket": "ideafi-374e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:714293753861:android:7004b6ad695cca1891046c",
+        "android_client_info": {
+          "package_name": "com.example.gamified_ip_rights"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "714293753861-ioiat0oe7amgd2hq57c3cjt9619aakut.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gamified_ip_rights",
+            "certificate_hash": "ab02fe0765e552b0be7adb421ca5219223651ef0"
+          }
+        },
+        {
+          "client_id": "714293753861-otr5jdnmkpt0bo6ot0a1spg9blaqnjgs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpteRSgkfSrFy2TqDbaOz73WiH8JeSCL4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "714293753861-otr5jdnmkpt0bo6ot0a1spg9blaqnjgs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
