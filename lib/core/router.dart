@@ -1,7 +1,9 @@
 import 'package:gamified_ip_rights/features/auth/screen/auth_screen.dart';
 import 'package:gamified_ip_rights/features/auth/screen/user_info_fill_screen.dart';
 import 'package:gamified_ip_rights/features/home/screen/home_screen.dart';
+import 'package:gamified_ip_rights/features/module_based/screen/activity_loading_screen.dart';
 import 'package:gamified_ip_rights/features/module_based/screen/activity_room_screen.dart';
+import 'package:gamified_ip_rights/features/module_based/screen/activity_summary_screen.dart';
 import 'package:gamified_ip_rights/features/onboarding/onboarding_screen.dart';
 
 import '../features/splash/splash_screen.dart';
@@ -13,7 +15,9 @@ class AppRouter {
     AppRoute.authentication.path: (context) => const AuthenticationScreen(),
     AppRoute.userinfofillup.path: (context) => const UserInfoFillScreen(),
     AppRoute.home.path: (context) => const HomeScreen(),
-    AppRoute.activityRoom.path: (context) => const ActivityRoomScreen()
+    AppRoute.activityLoading.path: (context) => const ActivityLoadingScreen(),
+    AppRoute.activityRoom.path: (context) => const ActivityRoomScreen(),
+    AppRoute.activitySummary.path: (context) => const ActivitySummaryScreen()
   };
 }
 
@@ -24,7 +28,9 @@ enum AppRoute {
   userinfofillup("/user-info-fillup"),
   leaderboard("/leaderboard"),
   home("/home"),
-  activityRoom("/map-of-progress/activity-room");
+  activityLoading("/map-of-progress/activity-loading"),
+  activityRoom("/map-of-progress/activity-room"),
+  activitySummary("/map-of-progress/activity-summary");
 
   final String path;
   const AppRoute(this.path);

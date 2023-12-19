@@ -7,14 +7,14 @@ class LevelModel {
   final String levelName;
   final int maxPoints;
   int? scoredPoints;
-  bool isLocked = true;
+  String? status;
   LevelModel({
     required this.moduleNumber,
     required this.levelNumber,
     required this.levelName,
     required this.maxPoints,
     this.scoredPoints,
-    required this.isLocked,
+    this.status,
   });
 
   LevelModel copyWith({
@@ -23,7 +23,7 @@ class LevelModel {
     String? levelName,
     int? maxPoints,
     int? scoredPoints,
-    bool? isLocked,
+    String? status,
   }) {
     return LevelModel(
       moduleNumber: moduleNumber ?? this.moduleNumber,
@@ -31,7 +31,7 @@ class LevelModel {
       levelName: levelName ?? this.levelName,
       maxPoints: maxPoints ?? this.maxPoints,
       scoredPoints: scoredPoints ?? this.scoredPoints,
-      isLocked: isLocked ?? this.isLocked,
+      status: status ?? this.status,
     );
   }
 
@@ -42,7 +42,7 @@ class LevelModel {
       'levelName': levelName,
       'maxPoints': maxPoints,
       'scoredPoints': scoredPoints,
-      'isLocked': isLocked,
+      'status': status,
     };
   }
 
@@ -54,7 +54,7 @@ class LevelModel {
       maxPoints: map['maxPoints'] as int,
       scoredPoints:
           map['scoredPoints'] != null ? map['scoredPoints'] as int : null,
-      isLocked: map['isLocked'] as bool,
+      status: map['status'] != null ? map['status'] as String : null,
     );
   }
 
@@ -65,7 +65,7 @@ class LevelModel {
 
   @override
   String toString() {
-    return 'LevelModel(moduleNumber: $moduleNumber, levelNumber: $levelNumber, levelName: $levelName, maxPoints: $maxPoints, scoredPoints: $scoredPoints, isLocked: $isLocked)';
+    return 'LevelModel(moduleNumber: $moduleNumber, levelNumber: $levelNumber, levelName: $levelName, maxPoints: $maxPoints, scoredPoints: $scoredPoints, status: $status)';
   }
 
   @override
@@ -77,7 +77,7 @@ class LevelModel {
         other.levelName == levelName &&
         other.maxPoints == maxPoints &&
         other.scoredPoints == scoredPoints &&
-        other.isLocked == isLocked;
+        other.status == status;
   }
 
   @override
@@ -87,6 +87,6 @@ class LevelModel {
         levelName.hashCode ^
         maxPoints.hashCode ^
         scoredPoints.hashCode ^
-        isLocked.hashCode;
+        status.hashCode;
   }
 }

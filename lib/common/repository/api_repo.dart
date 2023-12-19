@@ -39,4 +39,29 @@ class ApiRepo {
     ));
     return response;
   }
+
+  Future<Response> getUserProgress(String userId) async {
+    String endPoint = "user/getUserProgress";
+    final response = await dio.get("$baseUrl$endPoint", data: {
+      "userId": userId,
+    }, options: Options(
+      validateStatus: (status) {
+        return true;
+      },
+    ));
+    return response;
+  }
+
+  Future<Response> getModuleProgress(String userId) async {
+    String endPoint = "user/getUserModuleProgress";
+    final response = await dio.get("$baseUrl$endPoint", data: {
+      "userId": userId,
+    }, options: Options(
+      validateStatus: (status) {
+        return true;
+      },
+    ));
+    print(response.data);
+    return response;
+  }
 }

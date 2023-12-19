@@ -35,14 +35,7 @@ class ImageMCQ extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5.w)),
               child: Image.asset('assets/images/copyright.png'),
             ),
-            Container(
-              width: 130.w,
-              height: 120.h,
-              decoration: BoxDecoration(
-                  color: AppColors.grey.withOpacity(0.05),
-                  border: Border.all(color: AppColors.grey, width: 2.w),
-                  borderRadius: BorderRadius.circular(5.w)),
-            )
+            ImageOption(imageName: "imageName")
           ],
         ),
         SizedBox(
@@ -70,6 +63,25 @@ class ImageMCQ extends StatelessWidget {
           ],
         ),
       ],
+    );
+  }
+}
+
+class ImageOption extends StatelessWidget {
+  String imageName;
+  ImageOption({super.key, required this.imageName});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 130.w,
+      height: 120.h,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+          color: AppColors.grey.withOpacity(0.05),
+          border: Border.all(color: AppColors.grey, width: 2.w),
+          borderRadius: BorderRadius.circular(5.w)),
+      child: Image.asset('assets/images/copyright.png'),
     );
   }
 }

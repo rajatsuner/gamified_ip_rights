@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gamified_ip_rights/core/styles/colors.dart';
 import 'package:gamified_ip_rights/features/leaderboard/controller/leaderboard_controller.dart';
 import 'package:gamified_ip_rights/features/leaderboard/controller/leaderboard_providers.dart';
+import 'package:gamified_ip_rights/features/module_based/controller/module_controller.dart';
 
 final bottomNavIndexProvider = StateProvider((ref) => 0);
 
@@ -12,6 +13,9 @@ class BottomNavBar extends ConsumerWidget {
 
   _onTap(int index, WidgetRef ref) {
     ref.read(bottomNavIndexProvider.notifier).update((state) => index);
+    if (index == 0) {
+      _loadModules(ref);
+    }
     if (index == 2) {
       _loadLeaderboard(ref);
     }
@@ -21,6 +25,10 @@ class BottomNavBar extends ConsumerWidget {
     if (ref.read(leaderboardListProvider).isEmpty) {
       ref.read(leaderboardControllerProvider.notifier).getLeaderboardData();
     }
+  }
+
+  _loadModules(WidgetRef ref) {
+    //ref.read(moduleControllerProvider.notifier).getModules();
   }
 
   @override

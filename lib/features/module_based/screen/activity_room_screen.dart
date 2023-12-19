@@ -20,14 +20,14 @@ class ActivityRoomScreen extends StatelessWidget {
           Icons.close,
           size: 30.w,
         ),
-        title: LifelineBar(),
+        //  title: LifelineBar(),
         automaticallyImplyLeading: true,
         surfaceTintColor: AppColors.deepBlue,
         elevation: 1,
         centerTitle: true,
         bottom: PreferredSize(
             preferredSize: Size.fromHeight(15.h), child: ProgressBar()),
-        actions: [CurrentQuestionPoint()],
+        //  actions: [CurrentQuestionPoint()],
       ),
       body: Padding(
         padding:

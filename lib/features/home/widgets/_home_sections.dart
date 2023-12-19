@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gamified_ip_rights/features/home/widgets/_bottom_nav_bar.dart';
 import 'package:gamified_ip_rights/features/leaderboard/screen/leaderboard_screen.dart';
 import 'package:gamified_ip_rights/features/module_based/screen/map_of_progress_screen.dart';
+import 'package:gamified_ip_rights/features/profile/screen/profile_screen.dart';
 
 class HomeSections extends ConsumerWidget {
   HomeSections({super.key});
@@ -12,7 +13,7 @@ class HomeSections extends ConsumerWidget {
     Container(color: Colors.green),
     const LeaderboardScreen(),
     Container(color: Colors.blue),
-    Container(color: Colors.purple),
+    const ProfileScreen()
   ];
 
   @override

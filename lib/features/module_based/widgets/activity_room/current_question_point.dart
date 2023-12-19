@@ -21,7 +21,7 @@ class CurrentQuestionPoint extends StatelessWidget {
                 height: 20.h,
               ),
               Text(
-                "45",
+                "100",
                 style: TextStyle(fontWeight: FontWeight.bold),
               )
             ],
